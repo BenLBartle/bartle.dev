@@ -1,17 +1,17 @@
 module.exports = {
-  title: 'Dev Blog', // Required
-  author: 'Ryan Fitzgerald', // Required
-  description: 'Full-stack Web Developer',
+  title: 'Ben Bartle\'s Blog', // Required
+  author: 'Ben Bartle', // Required
+  description: 'Solution Architect',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    website: 'https://ryanfitzgerald.ca',
-    github: 'https://github.com/ryanfitzgerald',
-    twitter: 'https://twitter.com/ryanafitzgerald',
-    linkedin: 'https://ca.linkedin.com/in/ryanafitzgerald',
+    website: 'https://bartle.dev',
+    github: 'https://github.com/benlbartle',
+    twitter: 'https://twitter.com/benbartle',
+    linkedin: 'https://www.linkedin.com/in/benbartle/',
   },
-  pathPrefix: '/devblog',
-  siteUrl: 'https://ryanfitzgerald.github.io/devblog/',
+  pathPrefix: '/',
+  siteUrl: 'https://bartle.dev/',
 };
