@@ -7,7 +7,7 @@ module.exports = {
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    website: 'https://bartl.io',
+    website: '',
     github: 'https://github.com/benlbartle',
     twitter: 'https://twitter.com/benbartle',
     linkedin: 'https://www.linkedin.com/in/benbartle/',
