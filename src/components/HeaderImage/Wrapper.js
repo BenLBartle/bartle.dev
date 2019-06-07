@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
   img.wizard {
     padding: 5px;
-    width: 90px;
+    width: 110px;
   }
 
   @media screen and (max-width: 550px) {
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   
     img.wizard {
       padding: 3px;
-      width: 50px;
+      width: 65px;
     }
   }
 `;
