@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     width: 90px;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 550px) {
     img {
       padding: 3px;
       width: 40px;
