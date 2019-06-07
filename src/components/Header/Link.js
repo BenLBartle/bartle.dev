@@ -8,7 +8,6 @@ const Link = styled(GatsbyLink)`
   color: ${userConfig.primaryColor};
   text-decoration: none;
   font-family: "vt323";
-  font-size: 1000;
 `;
 
 export default Link;

@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Ben Bartle\'s Blog', // Required
-  author: 'bartl.io', // Required
+  author: 'bartle.dev', // Required
   description: 'Solution Architect, Developer & Pizza Maker',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
