@@ -1,6 +1,6 @@
 const userConfig = require('./config');
 
-module.exports = {
+cfg = {
   siteMetadata: {
     title: userConfig.title,
     author: userConfig.author,
@@ -66,3 +66,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
   ],
 };
+
+if (process.env.CONTEXT === "production") {
+  const googleAnalyticsCfg = {
+    resolve: "gatsby-plugin-google-analytics",
+    options: {
+      trackingId: "UA-142152274-1" // <- your tracking ID
+    }
+  };
+  cfg.plugins.push(googleAnalyticsCfg);
+}
+
+module.exports = cfg;
