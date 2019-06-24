@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Ben Bartle\'s Blog', // Required
   author: 'Azriel is my bitch', // Required
-  description: 'Solution Architect, Developer & Pizza Maker',
+  description: 'I eat doughnuts',
   primaryColor: '#3498db', // Required
   showHeaderImage: true,
   showShareButtons: true,
