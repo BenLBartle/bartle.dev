@@ -3,7 +3,7 @@ title: PowerApps Component Framework - a step forward
 date: "2019-07-01"
 ---
 
-[PCF](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/overview) is here, and it's changing the game.
+PowerApps Component Framework is here, and it's changing the game.
 
 <!-- end -->
 
