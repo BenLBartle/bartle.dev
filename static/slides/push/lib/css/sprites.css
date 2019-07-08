@@ -1,0 +1,15 @@
+
+
+.sprite-standard {
+    border: 0px !important;
+    width: 100px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.sprite-wizard {
+    border: 0px !important;
+    width: 140px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}

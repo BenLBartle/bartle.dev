@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; box-sizing: border-box; box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #333;
+}
+.credits {
+  text-decoration: none;
+  font: normal 8px "C64 User Mono";
+  color: #777;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+.credits:hover {
+  color: #aaa;
+}
+
+/**
+ * Fonts
+ */
+@font-face {
+   font-family: "C64 User Mono";
+   src: url("C64_User_Mono_v1.0-STYLE.eot");
+   src: url("C64_User_Mono_v1.0-STYLE.eot?#iefix") format("embedded-opentype"),
+        url("C64_User_Mono_v1.0-STYLE.woff") format("woff"),
+        url("C64_User_Mono_v1.0-STYLE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * The blue C64 screen
+ */
+.spacebar,
+section {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+
+  color: #6076c5;
+  font: normal 16px "C64 User Mono";
+  text-transform: uppercase;
+
+  z-index: 1;
+}
+/* Border of the sceen */
+section:before {
+  position: absolute;
+  left: -10%;
+  right: -11%;
+  top: -10%;
+  bottom: -11%;
+  /* width: 100%;
+  height: 100%; */
+  content: "";
+  background: #6076c5;
+  z-index: -1;
+}
+/* Inside screen */
+section:after {
+  position: absolute;
+  width: 92%;
+  height: 92%;
+  left: 8%;
+  right: 8%;
+  top: 8%;
+  bottom: 8%;
+  content: "";
+  background: #20398d;
+  z-index: -1;
+}
+
+
+@keyframes decrunch {
+  /* Firefox and IE10 won't animate linear-gradients, so we fall back to full border color change */
+  20% {
+    background: #b8b8b8;
+    background-image: linear-gradient(to bottom, #ffffff 5%,#000000 5%,#000000 10%,#b8b8b8 10%,#b8b8b8 16%,#5090d0 16%,#5090d0 23%,#98ff98 23%,#98ff98 28%,#808080 28%,#808080 33%,#484848 33%,#484848 40%,#c87870 40%,#c87870 46%,#472b1b 46%,#472b1b 51%,#a04800 51%,#a04800 57%,#f0e858 57%,#f0e858 62%,#181090 62%,#181090 69%,#50b818 69%,#50b818 78%,#a838a0 78%,#a838a0 86%,#68d0a8 86%,#68d0a8 95%,#882000 95%);
+  }
+  40% {
+    background: #484848;
+    background-image: linear-gradient(to bottom, #882000 10%,#68d0a8 10%,#68d0a8 12%,#a838a0 12%,#a838a0 18%,#50b818 18%,#50b818 27%,#181090 27%,#181090 38%,#f0e858 38%,#f0e858 41%,#a04800 41%,#a04800 56%,#472b1b 56%,#472b1b 61%,#c87870 61%,#c87870 66%,#484848 66%,#484848 68%,#808080 68%,#808080 75%,#98ff98 75%,#98ff98 77%,#5090d0 77%,#5090d0 92%,#b8b8b8 92%,#b8b8b8 94%,#000000 94%,#000000 97%,#ffffff 97%);
+  }
+  60% {
+    background: #c87870;
+    background-image: linear-gradient(to bottom, #ffffff 5%,#c87870 5%,#c87870 14%,#484848 14%,#484848 22%,#808080 22%,#808080 31%,#98ff98 31%,#98ff98 38%,#5090d0 38%,#5090d0 43%,#b8b8b8 43%,#b8b8b8 49%,#000000 49%,#000000 54%,#68d0a8 54%,#68d0a8 60%,#a838a0 60%,#a838a0 67%,#50b818 67%,#50b818 72%,#181090 72%,#181090 77%,#f0e858 77%,#f0e858 84%,#a04800 84%,#a04800 90%,#472b1b 90%,#472b1b 95%,#882000 95%);
+  }
+  80% {
+    background: #68d0a8;
+    background-image: linear-gradient(to bottom, #882000 5%,#68d0a8 5%,#68d0a8 14%,#a838a0 14%,#a838a0 22%,#50b818 22%,#50b818 31%,#181090 31%,#181090 38%,#f0e858 38%,#f0e858 43%,#a04800 43%,#a04800 49%,#472b1b 49%,#472b1b 54%,#c87870 54%,#c87870 60%,#484848 60%,#484848 67%,#808080 67%,#808080 72%,#98ff98 72%,#98ff98 77%,#5090d0 77%,#5090d0 84%,#b8b8b8 84%,#b8b8b8 90%,#000000 90%,#000000 95%,#ffffff 95%);
+  }
+  100% {
+    background: #50b818;
+    background-image: linear-gradient(to bottom, #ffffff 3%,#000000 3%,#000000 6%,#b8b8b8 6%,#b8b8b8 8%,#5090d0 8%,#5090d0 23%,#98ff98 23%,#98ff98 25%,#808080 25%,#808080 32%,#484848 32%,#484848 34%,#c87870 34%,#c87870 39%,#472b1b 39%,#472b1b 44%,#a04800 44%,#a04800 59%,#f0e858 59%,#f0e858 62%,#181090 62%,#181090 73%,#50b818 73%,#50b818 82%,#a838a0 82%,#a838a0 88%,#68d0a8 88%,#68d0a8 90%,#882000 90%);
+  }
+}
+
+/**
+ * All the typing stuff on the blue screen
+ */
+.loading {
+  line-height: 1;
+}
+.loading li {
+  padding-right: 1em;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  float: left;
+  clear: left;
+}
+.loading li:first-child {
+  height: auto;
+  width: auto;
+}
+.loading li:before {
+  white-space: pre;
+}
+
+/**
+ * Decrunching
+ */
+section.bluescreen:before {
+  animation-name: decrunch;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+}
+
+/**
+ * Intro screen animations
+ */
+@keyframes startintro {
+  to {
+    visibility: visible;
+  }
+}
+@keyframes logoswing {
+  50% {
+    left: -162px;
+  }
+}
+@keyframes rasterswing {
+  50% {
+    top: 168px;
+  }
+}
+@keyframes rasterindex {
+  50% {
+    z-index: 10;
+  }
+}
+@keyframes textflash {
+  0% { color: #000000; }
+  1% { color: #20398d; }
+  2% { color: #6076c5; }
+  3% { color: #86bec5; }
+  4% { color: #ffffff; }
+  5% { color: #86bec5; }
+  6% { color: #6076c5; }
+  7% { color: #20398d; }
+  8% { color: #000000; }
+  26% { color: #873b31; }
+  27% { color: #ba7369; }
+  28% { color: #dce78c; }
+  29% { color: #ffffff; }
+  30% { color: #dce78c; }
+  31% { color: #ba7369; }
+  32% { color: #873b31; }
+  33% { color: #000000; }
+  51% { color: #555555; }
+  52% { color: #808080; }
+  53% { color: #ababab; }
+  54% { color: #ffffff; }
+  55% { color: #ababab; }
+  56% { color: #808080; }
+  57% { color: #555555; }
+  58% { color: #000000; }
+  76% { color: #625000; }
+  77% { color: #74ab54; }
+  78% { color: #b7eb9b; }
+  79% { color: #ffffff; }
+  80% { color: #b7eb9b; }
+  81% { color: #74ab54; }
+  82% { color: #625000; }
+  83% { color: #000000; }
+}
+@keyframes starscroll {
+  to {
+    left: -40em;
+  }
+}
+@keyframes scroller {
+  to {
+    text-indent: -220em; /* Should match text length */
+  }
+}
+@keyframes scrollerbounce {
+  from, to  {
+    animation-timing-function: ease-out;
+  }
+  50% {
+    line-height: 1em;
+    animation-timing-function: ease-in;
+  }
+}

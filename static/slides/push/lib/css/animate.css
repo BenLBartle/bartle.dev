@@ -1,0 +1,11 @@
+@keyframes typingAnimation {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingAnimation 2s steps(20,end) infinite;
+      margin: 0 auto;
+  }
