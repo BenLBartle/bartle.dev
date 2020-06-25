@@ -66,7 +66,7 @@ The last few weeks were hard, we had to have so many scans and so much time on t
 
 ## 8th September, 2019
 
-Lukily even when induced my wife's labour does not mess about, and early on Sunday morning our 2nd daughter - *Sophie Florence Bartle* was born. 
+Luckily even when induced my wife's labour does not mess about, and early on Sunday morning our 2nd daughter - *Sophie Florence Bartle* was born. 
 
 ![Sophie 1 day Old](./sophie1.jpg "Sophie 1 day old")
 
@@ -94,3 +94,56 @@ She had to have both her feet in casts for several weeks, which was really frust
 
 After a while they gave us some stretching to do and she could have so cast free periods. We haven't been in casts for a long time now due to lockdown - but we are resigned to probably having to go back into them again and possibly surgery, but that is not for now.
 
+## March 2020
+
+So we had a handle on it for a while, we were dealing with the lack of sleep, the difficulty feeding a sleepy baby, and me getting used to working away (I was, and still are, working on a project in Brighton).
+
+Sophie was developmentally delayed, still not really lifting her head much and we had concerns about her vision. But she would occasionally smile and squeal (especially with sound). She also has a love of sneezing like she's in a cartoon, and losing her socks on every occasion.
+
+![Sophie Smiling](./sophie3.jpg "Sophie Smiling")
+
+But then late February and early March we noticed Sophie would make unusual movements, very subtle at first, but then more frequent and in clusters. 
+
+So one Saturday they became more apparent, and Naomi, regonising them as potential seizures called NHS 111 and we ended up going to childrens A&E at MKUH in an ambulance. 
+
+The doctors that day weren't that worried, and discharged us the same day, thinking it was reflux. But they didn't go away and after a video sent to our paedeatrician, we were sent to Northampton for an EEG which confirmed a diagnosis of [West Syndrome](https://www.epilepsy.org.uk/info/syndromes/west-syndrome-infantile-spasms), often called infantile spasms, which is a form of epilepsy.
+
+![Sophie EEG](./sophie4.jpg "Sophie EEG")
+
+Below is a link for a video to show what these look like. These are what we showed to our doctors to help the diagnosis. This is a long video and shows how they can be subtle and get larger and stronger. It isn't the most pleasant thing to view, but if you want to see what it's like, this is the best way for me to explain:
+
+https://drive.google.com/file/d/1Kv599sgLcQSd64uH1A6A1KTAgK15ReQ7/view?usp=sharing
+
+### Treatment
+
+After the EEG, we were re-admitted and went straight to treatment. This was my last day on-site with work and wasd the start of a pretty crappy month.
+
+Sophie was started on Prednisolone, which is a primary treatment to control the seizures. We had a good start, her blood sugar and blood pressure were monitored for 24 hours and we were sent home. It was after a trip to the geneticist that everything went a bit wrong.
+
+Basically, Sophie became increasingly irritable and stopped feeding. We were re-admitted to hospital, and it seemed to get worse and worse. Sophie had reacted badly to the Prednisolone, and was causing her to have a very upset stomach, horrendous nappy rash and was basically crying every waking moment. One night she had to be sedated.
+
+She was fed by a NG tube for a week, but we eventually managed to get her back on the bottle after we changed the medication to counteract the effect of the prednisolone.
+
+On the plus side we had one amazing nurse, who on peak nappy rash, contorted Sophie to sleep with her bum fully exposed in the air to help it heal, and she slept though the night. It was WITCHCRAFT.
+
+We were eventually discharged, and tried another medication (vigabatrin) which seemed to reduce the seizures to almost zero. Unfortunately her development stopped and in some ways even regressed.
+
+Unfortunately the medication cocktail she is on now makes her either very, very sleepy or wired. This is making weaning (already a difficult task) quite challenging.
+
+## May 2020
+
+During all of these we've been working with a genetist in Oxford, to try and understand the cause of Sophie's symptoms. We've had her exome sequenced and whilst we have nothing conclusive, we believe it is a form of DNA repair disorder. We have (in the absence of anything else) been referring to it as Sophie Syndrome. 
+
+We've been told her condition is very similar to [Cockayne Syndrome](https://rarediseases.org/rare-diseases/cockayne-syndrome/), but it is not the same as they have explicitly checked those genes.
+
+They have taken extra blood to try and investigate further.
+
+## Today, June 2020
+
+So this has left Sophie as a very underdeveloped child. She still doesn't even really have good head support despite being 9 months old. She doesn't sit, talk, crawl or roll over. She is pretty much like a 2 month old baby. But she loves her bath, likes it when you play with her feet and enjoys the beats of Shakira (Try Everything is her favourite song).
+
+We don't know what her future may bring, and whilst we are still hopeful we are realistic in terms of what she may be able to do, whether she will deteriorate, or even how long she may be with us.
+
+Her sister has some understanding (if you ask her, she will tell you her sister has a poorly brain), but is kind as she can be and still adores her Sophie. I think sometimes she grieves for the sister she wished she could have, who would play dolls with her and splash with her in the bath. These days may still come, but they also may not.
+
+So I've ever been short, bad tempered or unavailable in the last few months, I hope this gives an insight into why.
