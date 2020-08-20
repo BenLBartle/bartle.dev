@@ -116,7 +116,7 @@ https://drive.google.com/file/d/1Kv599sgLcQSd64uH1A6A1KTAgK15ReQ7/view?usp=shari
 
 ### Treatment
 
-After the EEG, we were re-admitted and went straight to treatment. This was my last day on-site with work and wasd the start of a pretty crappy month.
+After the EEG, we were re-admitted and went straight to treatment. This was my last day on-site with work and was the start of a pretty crappy month.
 
 Sophie was started on Prednisolone, which is a primary treatment to control the seizures. We had a good start, her blood sugar and blood pressure were monitored for 24 hours and we were sent home. It was after a trip to the geneticist that everything went a bit wrong.
 
