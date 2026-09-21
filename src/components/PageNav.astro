@@ -1,0 +1,45 @@
+---
+interface Props {
+  previous?: { slug: string; data: { title: string } };
+  next?: { slug: string; data: { title: string } };
+}
+
+const { previous, next } = Astro.props;
+---
+
+<div class="page-nav">
+  {previous && (
+    <a class="button" href={`/blog/${previous.slug}/`} rel="prev">
+      &larr; {previous.data.title}
+    </a>
+  )}
+  {next && (
+    <a class="button" href={`/blog/${next.slug}/`} rel="next">
+      {next.data.title} &rarr;
+    </a>
+  )}
+</div>
+
+<style>
+  .page-nav {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .button {
+    border: 1px solid #bfc8d2;
+    border-radius: 25px;
+    color: #3e465b;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .button:hover {
+    border-color: #000;
+  }
+</style>

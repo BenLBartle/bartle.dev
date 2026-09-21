@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import Card from '../../components/Card.astro';
+import ArticleHeader from '../../components/ArticleHeader.astro';
+import Article from '../../components/Article.astro';
+import Share from '../../components/Share.astro';
+import PageNav from '../../components/PageNav.astro';
+import { getSortedPosts } from '../../lib/posts';
+import { SITE } from '../../consts';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: {
+      post,
+      previous: index === posts.length - 1 ? undefined : posts[index + 1],
+      next: index === 0 ? undefined : posts[index - 1],
+    },
+  }));
+}
+
+const { post, previous, next } = Astro.props;
+const { Content } = await render(post);
+const url = new URL(Astro.request.url).href;
+---
+
+<BaseLayout title={`${post.data.title} | ${SITE.author}`}>
+  <Container>
+    <Card>
+      <ArticleHeader title={post.data.title} date={post.data.date} featuredImage={post.data.featuredImage} />
+      <Article>
+        <Content />
+      </Article>
+      {SITE.showShareButtons && <Share url={url} title={post.data.title} />}
+    </Card>
+    <PageNav previous={previous} next={next} />
+  </Container>
+</BaseLayout>

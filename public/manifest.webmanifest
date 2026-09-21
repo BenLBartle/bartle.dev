@@ -1,0 +1,15 @@
+{
+  "name": "Ben Bartle's Blog",
+  "short_name": "Ben Bartle's Blog",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color": "#3498db",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "/main.jpg",
+      "sizes": "250x250",
+      "type": "image/jpeg"
+    }
+  ]
+}

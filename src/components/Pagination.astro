@@ -1,0 +1,39 @@
+---
+interface Props {
+  previousUrl?: string;
+  nextUrl?: string;
+  isFirst?: boolean;
+  isLast?: boolean;
+}
+
+const { previousUrl, nextUrl, isFirst = false, isLast = false } = Astro.props;
+---
+
+<div class="pagination">
+  {!isFirst && previousUrl && <a class="button" href={previousUrl}>&larr; Newer Posts</a>}
+  {!isLast && nextUrl && <a class="button" href={nextUrl}>Older Posts &rarr;</a>}
+</div>
+
+<style>
+  .pagination {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .button {
+    border: 1px solid #bfc8d2;
+    border-radius: 25px;
+    color: #3e465b;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .button:hover {
+    border-color: #000;
+  }
+</style>
