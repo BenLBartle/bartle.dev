@@ -6,9 +6,10 @@ import { SITE } from '../consts';
 interface Props {
   title: string;
   description?: string;
+  showHeader?: boolean;
 }
 
-const { title, description = SITE.description } = Astro.props;
+const { title, description = SITE.description, showHeader = true } = Astro.props;
 ---
 
 <html lang="en">
@@ -33,7 +34,7 @@ const { title, description = SITE.description } = Astro.props;
     )}
   </head>
   <body>
-    <Header />
+    {showHeader && <Header />}
     <slot />
   </body>
 </html>
