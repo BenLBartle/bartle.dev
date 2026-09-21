@@ -1,0 +1,21 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Card from '../components/Card.astro';
+import Article from '../components/Article.astro';
+import { SITE } from '../consts';
+
+const entry = await getEntry('uses', 'index');
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={`${entry.data.title ?? 'Uses'} | ${SITE.author}`}>
+  <Container>
+    <Card>
+      <Article>
+        <Content />
+      </Article>
+    </Card>
+  </Container>
+</BaseLayout>

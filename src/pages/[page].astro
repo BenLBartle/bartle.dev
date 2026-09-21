@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import PostList from '../components/PostList.astro';
+import { getSortedPosts } from '../lib/posts';
+import { SITE } from '../consts';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  const pageSize = SITE.postsPerPage;
+  const pageCount = Math.ceil(posts.length / pageSize);
+  const paths = [];
+
+  for (let currentPage = 2; currentPage <= pageCount; currentPage++) {
+    const start = (currentPage - 1) * pageSize;
+    paths.push({
+      params: { page: String(currentPage) },
+      props: {
+        posts: posts.slice(start, start + pageSize),
+        page: {
+          currentPage,
+          lastPage: pageCount,
+          url: {
+            prev: currentPage === 2 ? '/' : `/${currentPage - 1}/`,
+            next: currentPage < pageCount ? `/${currentPage + 1}/` : undefined,
+          },
+        },
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { posts, page } = Astro.props;
+---
+
+<BaseLayout title={`${SITE.title} | ${SITE.author}`}>
+  <Container>
+    <PostList posts={posts} page={page} />
+  </Container>
+</BaseLayout>

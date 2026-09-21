@@ -1,0 +1,104 @@
+---
+---
+
+<article class="article">
+  <slot />
+</article>
+
+<style>
+  .article {
+    color: #65738c;
+    font-size: 16px;
+  }
+
+  .article :global(a) {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .article :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .article :global(h1) {
+    color: #3e465b;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+  }
+
+  .article :global(h2) {
+    color: #3e465b;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+  }
+
+  .article :global(h3) {
+    color: #3e465b;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+  }
+
+  .article :global(h4),
+  .article :global(h5),
+  .article :global(h6) {
+    color: #3e465b;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+  }
+
+  .article :global(p) {
+    line-height: 1.7;
+    margin: 15px 50px;
+  }
+
+  .article :global(blockquote) {
+    border-left: 5px solid #e0e6ed;
+    line-height: 1.7;
+    margin: 15px 50px 15px 75px;
+    padding: 10px 10px 10px 15px;
+  }
+
+  .article :global(blockquote p) {
+    margin: 0;
+  }
+
+  .article :global(ul),
+  .article :global(ol) {
+    line-height: 1.7;
+    margin: 15px 0;
+    padding: 0 50px 0 100px;
+  }
+
+  .article :global(ul p),
+  .article :global(ol p),
+  .article :global(ul ul),
+  .article :global(ul ol),
+  .article :global(ol ul),
+  .article :global(ol ol) {
+    margin: 0;
+  }
+
+  .article :global(ul ul),
+  .article :global(ul ol),
+  .article :global(ol ul),
+  .article :global(ol ol) {
+    padding: 0 0 0 30px;
+  }
+
+  .article :global(img) {
+    margin: 15px 0;
+  }
+
+  .article :global(iframe) {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+</style>

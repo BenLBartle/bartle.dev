@@ -1,0 +1,51 @@
+---
+import type { ImageMetadata } from 'astro:assets';
+import FeaturedImage from './FeaturedImage.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+  featuredImage?: ImageMetadata;
+}
+
+const { title, date, featuredImage } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<div class="article-header">
+  {featuredImage && <FeaturedImage image={featuredImage} />}
+  <h1>{title}</h1>
+  <p>{formattedDate}</p>
+  <span class="divider"></span>
+</div>
+
+<style>
+  .article-header :global(h1) {
+    color: #3e465b;
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .article-header :global(p) {
+    color: #666d71;
+    display: block;
+    font-size: 1.6em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .divider {
+    background: #9c9da3;
+    display: block;
+    margin: 50px auto;
+    height: 1px;
+    width: 150px;
+  }
+</style>

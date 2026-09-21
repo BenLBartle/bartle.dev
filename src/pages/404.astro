@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import { SITE } from '../consts';
+---
+
+<BaseLayout title={`Not Found | ${SITE.author}`}>
+  <Container>
+    <div class="not-found">
+      <h2>Sorry, that page was not found.</h2>
+    </div>
+  </Container>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+  }
+
+  h2 {
+    color: #3e465b;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+  }
+</style>

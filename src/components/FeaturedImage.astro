@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata;
+  alt?: string;
+}
+
+const { image, alt = '' } = Astro.props;
+---
+
+<div class="featured-image">
+  <Image src={image} alt={alt} widths={[350, 700, 850]} sizes="(max-width: 870px) 100vw, 850px" />
+</div>
+
+<style>
+  .featured-image {
+    margin: -65px -90px 50px;
+  }
+
+  .featured-image img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 870px) {
+    .featured-image {
+      margin: -65px -5px 50px;
+    }
+  }
+</style>

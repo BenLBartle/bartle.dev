@@ -1,0 +1,84 @@
+---
+import Container from './Container.astro';
+import Social from './Social.astro';
+import { SITE } from '../consts';
+---
+
+<Container>
+  <header class="header">
+    {SITE.showHeaderImage && (
+      <div class="header-image">
+        <a href="/">
+          <img src="/ben1.png" alt="" />
+          <img src="/ben2.png" alt="" />
+          <img src="/ben3.png" alt="" />
+          <img src="/ben4.png" class="wizard" alt="" />
+        </a>
+      </div>
+    )}
+    <h1 class="title"><a href="/">{SITE.author}</a></h1>
+    <p class="tagline">{SITE.description}</p>
+    <Social {...SITE.social} />
+  </header>
+</Container>
+
+<style>
+  .header {
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 0 50px 50px;
+    text-align: center;
+  }
+
+  .header-image {
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    width: 75%;
+  }
+
+  .header-image img {
+    padding: 5px;
+    width: 70px;
+  }
+
+  .header-image img.wizard {
+    padding: 5px;
+    width: 108px;
+  }
+
+  @media screen and (max-width: 550px) {
+    .header-image img {
+      padding: 3px;
+      width: 40px;
+    }
+
+    .header-image img.wizard {
+      padding: 3px;
+      width: 63px;
+    }
+  }
+
+  .title {
+    color: #3e465b;
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .title a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+  }
+
+  .tagline {
+    color: #666d71;
+    display: block;
+    font-size: 1.6em;
+    margin: 0;
+    text-align: center;
+    font-family: 'VT323', monospace;
+  }
+</style>
