@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Card from '../components/Card.astro';
+import { SITE } from '../consts';
+
+const contact = {
+  name: 'Ben Bartle',
+  title: 'Principal / Enterprise Architect',
+  location: 'Milton Keynes, United Kingdom',
+  email: 'ben@bartl.io',
+};
+
+const profile =
+  "Enterprise architect and architecture leader with nearly 20 years of experience shaping complex technology estates, leading transformation and connecting architectural strategy to engineering delivery. Experienced in cloud transformation, domain-driven design, platform and service architecture, architectural governance and operating-model development. Particularly effective at making complex estates understandable, establishing clear technical direction and bringing teams together around decisions that cross organisational and system boundaries.";
+
+const coreExpertise = [
+  'Enterprise architecture',
+  'Architecture strategy',
+  'Domain-driven design',
+  'Cloud transformation',
+  'GCP and Azure',
+  'Distributed systems',
+  'Reference architecture',
+  'Architecture governance',
+  'Technical leadership',
+];
+
+const experience = [
+  {
+    company: 'Rightmove',
+    period: 'Sep 2023 - Present',
+    roles: [
+      { title: 'Head of Architecture', period: 'Jul 2024 - Present' },
+      { title: 'Enterprise Architect', period: 'Sep 2023 - Jun 2024' },
+    ],
+    bullets: [
+      "Promoted to lead a seven-person architecture function supporting more than 30 product teams, with responsibility for architectural strategy, practice development and technical direction across Rightmove's large-scale digital platform.",
+      "Refined the vision, strategy and operating model for the architecture function, clarifying its role and introducing competency frameworks incorporated into the company's year-end evaluation process.",
+      "Played a leading role in Rightmove's migration to Google Cloud Platform, coordinating complex cross-functional programmes and defining reference architectures for critical platform capabilities.",
+      'Defined the reference architecture through which cloud-hosted applications communicated with a three-site Oracle database deployment, preserving consistency for consumers at significant scale.',
+      'Applied domain-driven design to a large, organically evolved estate, establishing domains, bounded contexts and ownership boundaries that provided anchor points for team design and application rationalisation.',
+      'Introduced continuous architectural evaluation, combining architecture fitness measures with internally developed modelling capabilities to make architectural health visible, repeatable and machine-readable, while preparing architecture practice for AI-assisted engineering and assurance.',
+      'Strengthened relationships across architecture, product, engineering, data, platform and operations; facilitated operational and analytical technology teams to agree approaches that met stakeholder needs without unnecessary coupling.',
+    ],
+  },
+  {
+    company: 'KPMG Microsoft Business Solutions',
+    period: '2019 - Sep 2023',
+    roles: [{ title: 'Senior Solution Architect' }],
+    bullets: [
+      'Led solution architecture for transformation programmes and strategic advisory engagements, working with client enterprise architects, senior stakeholders and multidisciplinary delivery teams.',
+      'Held overall architectural accountability for a year-long transformation at The Pensions Regulator, providing technical leadership across a team of approximately 15 and coordinating technical architects embedded within the delivery teams.',
+      'Designed a contact-centre and document-management platform using Microsoft Dynamics 365 Customer Engagement, Power Platform and SharePoint Online, enabling retirement of several end-of-life legacy systems.',
+      'Introduced stronger controls for sensitive enforcement documentation, using Power Automate and Azure Logic Apps to dynamically maintain access-control groups as restricted insider lists changed.',
+      "Additional advisory work included Azure infrastructure and API Management architecture for the Care Quality Commission; international reference architecture for HSBC Commercial Banking; and an architecture assessment of Bupa's intermediary quotation platform.",
+      "Contributed to the leadership of KPMG's architecture community, developing reusable methods and templates used across multiple client programmes.",
+    ],
+  },
+  {
+    company: 'IBM UK',
+    period: '2015 - 2019',
+    roles: [{ title: 'Application Architect' }],
+    bullets: [
+      "Led analysis, solution design and international delivery teams within IBM's Microsoft practice. Designed Dynamics-based solutions integrated with complex back-office platforms and modern web applications, and led the Architecture and Technology Capability Team with a focus on DevOps adoption.",
+    ],
+  },
+  {
+    company: 'CIBER UK',
+    period: '2014 - 2015',
+    roles: [{ title: 'Dynamics CRM Consultant' }],
+    bullets: [
+      'Brought Microsoft Dynamics into a fast-paced agile system-replacement programme, championing agile delivery and applying DevOps principles to the Dynamics development lifecycle.',
+    ],
+  },
+  {
+    company: 'M4 Systems (now sa.global)',
+    period: '2007 - 2014',
+    roles: [{ title: 'Senior CRM Applications Consultant' }],
+    bullets: [
+      'Led requirements analysis and solution design across CRM programmes in multiple industries, acting as the client-facing lead for offshore delivery teams. Engagements ranged from small cloud deployments to large, highly integrated on-premises platforms.',
+    ],
+  },
+];
+
+const education = {
+  institution: 'University of Reading',
+  qualification: 'BSc (Hons) Computer Science and Cybernetics, 2005',
+  detail: 'Upper second-class honours',
+};
+---
+
+<BaseLayout title={`CV | ${contact.name}`} description={`${contact.name} — ${contact.title}`} showHeader={false}>
+  <Container>
+    <Card>
+      <div class="cv">
+        <div class="no-print cv-actions">
+          <button type="button" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+
+        <div class="cv-header">
+          <h1>{contact.name}</h1>
+          <p class="cv-title">{contact.title}</p>
+          <p class="cv-contact">
+            {contact.location} &nbsp;|&nbsp; {contact.email}
+          </p>
+        </div>
+
+        <section class="cv-section">
+          <h2>Profile</h2>
+          <p>{profile}</p>
+        </section>
+
+        <section class="cv-section">
+          <h2>Core Expertise</h2>
+          <ul class="tag-list">
+            {coreExpertise.map((skill) => <li>{skill}</li>)}
+          </ul>
+        </section>
+
+        <section class="cv-section">
+          <h2>Professional Experience</h2>
+          {experience.map((job) => (
+            <div class="job">
+              <div class="job-header">
+                <h3>{job.company}</h3>
+                <span class="job-period">{job.period}</span>
+              </div>
+              {job.roles.map((role) => (
+                <div class="role">
+                  <span class="role-title">{role.title}</span>
+                  {role.period && <span class="role-period">{role.period}</span>}
+                </div>
+              ))}
+              <ul>
+                {job.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            </div>
+          ))}
+        </section>
+
+        <section class="cv-section">
+          <h2>Education</h2>
+          <p class="education">
+            <strong>{education.institution}</strong> &nbsp;|&nbsp; {education.qualification}
+          </p>
+          <p class="education-detail">{education.detail}</p>
+        </section>
+      </div>
+    </Card>
+  </Container>
+</BaseLayout>
+
+<style>
+  .cv-actions {
+    text-align: right;
+    margin-bottom: 30px;
+  }
+
+  .cv-actions button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 20px;
+  }
+
+  .cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .cv-header h1 {
+    color: #3e465b;
+    font-size: 52px;
+    margin: 0 0 5px;
+  }
+
+  .cv-title {
+    color: var(--primary-color);
+    font-size: 26px;
+    margin: 0 0 10px;
+  }
+
+  .cv-contact {
+    color: #666d71;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .cv-section {
+    margin-bottom: 35px;
+  }
+
+  .cv-section h2 {
+    border-bottom: 2px solid #e0e6ed;
+    color: #3e465b;
+    font-size: 28px;
+    margin: 0 0 15px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cv-section p {
+    color: #444b5c;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tag-list li {
+    background: #f2f6fa;
+    border: 1px solid #e0e6ed;
+    border-radius: 15px;
+    color: #3e465b;
+    font-size: 17px;
+    padding: 5px 14px;
+  }
+
+  .job {
+    margin-bottom: 25px;
+    break-inside: avoid;
+  }
+
+  .job:last-child {
+    margin-bottom: 0;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .job-header h3 {
+    color: #3e465b;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .job-period {
+    color: #666d71;
+    font-size: 15px;
+  }
+
+  .role {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  .role-title {
+    color: var(--primary-color);
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .role-period {
+    color: #666d71;
+    font-size: 15px;
+  }
+
+  .job ul {
+    color: #444b5c;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+
+  .job li {
+    margin-bottom: 6px;
+  }
+
+  .education p {
+    color: #444b5c;
+    font-size: 17px;
+  }
+
+  .education-detail {
+    color: #666d71;
+    font-size: 16px;
+    margin-top: 4px;
+  }
+
+  @media print {
+    :global(header),
+    .no-print {
+      display: none !important;
+    }
+
+    :global(body) {
+      background: #fff;
+      padding: 0;
+    }
+
+    :global(.card) {
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    :global(.container) {
+      max-width: 100%;
+    }
+
+    .cv-section h2 {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+</style>
